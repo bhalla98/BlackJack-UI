@@ -1,10 +1,3 @@
-//
-//  House.swift
-//  ClassesMagicFun
-//
-//  Created by Michael Dippery on 7/30/16.
-//  Copyright © 2016 Flatiron School. All rights reserved.
-//
 
 import Foundation
 
@@ -13,7 +6,7 @@ class House: Player {
         super.init(name: "House")
     }
 
-    override func willHit(bet: UInt) -> Bool {
+    override func willHit(_ bet: UInt) -> Bool {
         return handValue < 17
     }
 }

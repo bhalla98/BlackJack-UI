@@ -1,10 +1,3 @@
-//
-//  Dealer.swift
-//  ClassesMagicFun
-//
-//  Created by Michael Dippery on 7/30/16.
-//  Copyright © 2016 Flatiron School. All rights reserved.
-//
 
 import Foundation
 
@@ -48,7 +41,7 @@ class Dealer {
         winningPlayer = nil
     }
 
-    func placeBet(bet: UInt) -> Bool {
+    func placeBet(_ bet: UInt) -> Bool {
         guard player.canPlaceBet(bet) && house.canPlaceBet(bet) else { return false }
         currentBet = bet
         return true
@@ -69,7 +62,7 @@ class Dealer {
         }
     }
 
-    func turn(player: Player) {
+    func turn(_ player: Player) {
         while player.willHit(currentBet) && player.handSize <= 5 {
             player.dealCard(deck.drawCard()!)
         }
